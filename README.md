@@ -29,9 +29,9 @@ Con esto ya tendremos configurada nuestra VPN y nuestra ip cambiará, para ello 
     
     ![image](https://github.com/Barahona1602/Redes1/assets/98893615/1a7015d2-c8db-4531-995a-eb08a5310165)
 
-### Topologías de VLAN
+## Topologías de VLAN
 Se requiere una conexión a través de la nube en tre tres topologías, una de área de trabajo, otra de backbone y otra de Servers. Estas deben de permitir la conexión entre sus propias VLAN pero no entre otras, por ejemplo RRHH no puede conectarse con los de Informática y viceversa.
-## Topología 1: Área de trabajo
+### Topología 1: Área de trabajo
 Esta zona, corresponde a la sección de cableado horizontal y área de trabajo, donde los usuarios finales tendrán acceso a los puntos de red y conectar un dispositivo final.  La cual tiene el diseño siguiente:
 
 ![WhatsApp Image 2023-09-12 at 1 16 55 PM](https://github.com/Barahona1602/VLAN_Topology/assets/98893615/df2d27c9-cc22-44d3-a9a9-420706fbbbe2)
