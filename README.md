@@ -2,9 +2,9 @@
 ## Integrantes Grupo 7
 | Ip | Nombre | Carnet |
 |----------|----------|----------|
-| 10.8.0.2 y 192.168.17.10 | Pablo Josué Barahona Luncey | 202109715 |
-| 10.8.0.4 y 192.168.17.20 | Ryan José Rodrigo Sigüenza Huertas | 202100101 |
-| 10.8.0.3 y 192.168.17.30 | Joshua David Osorio Tally |202110773 |
+| 10.8.0.2 | Pablo Josué Barahona Luncey | 202109715 |
+| 10.8.0.3 | Joshua David Osorio Tally |202110773 |
+| 10.8.0.4 | Ryan José Rodrigo Sigüenza Huertas | 202100101 |
 ## Configurar OpenVPN
 Con el archivo generado anteriormente ingresaremos a OpenVPN y cargaremos el archivo, este archivo iniciará la VPN y debemos de tener una pantalla así:
 
@@ -29,18 +29,18 @@ Con esto ya tendremos configurada nuestra VPN y nuestra ip cambiará, para ello 
     
     ![image](https://github.com/Barahona1602/Redes1/assets/98893615/1a7015d2-c8db-4531-995a-eb08a5310165)
 
-## Topologías de VLAN
+### Topologías de VLAN
 Se requiere una conexión a través de la nube en tre tres topologías, una de área de trabajo, otra de backbone y otra de Servers. Estas deben de permitir la conexión entre sus propias VLAN pero no entre otras, por ejemplo RRHH no puede conectarse con los de Informática y viceversa.
 ## Topología 1: Área de trabajo
 Esta zona, corresponde a la sección de cableado horizontal y área de trabajo, donde los usuarios finales tendrán acceso a los puntos de red y conectar un dispositivo final.  La cual tiene el diseño siguiente:
 
 ![WhatsApp Image 2023-09-12 at 1 16 55 PM](https://github.com/Barahona1602/VLAN_Topology/assets/98893615/df2d27c9-cc22-44d3-a9a9-420706fbbbe2)
-## Topología 2: Backbone
+### Topología 2: Backbone
 La zona de cableado vertical será la encargada de conectar el área de trabajo con la zona de servidores, para esto se tiene nodos altamente redundantes cuya finalidad es brindar una conectividad el 100% del tiempo. La cual tiene el diseño siguiente:
 
 ![WhatsApp Image 2023-09-12 at 1 38 25 PM (1)](https://github.com/Barahona1602/VLAN_Topology/assets/98893615/db6d2748-e81a-45bc-9e72-dd30b73dac48)
 
-## Topología 3: Servidores
+### Topología 3: Servidores
 Lugar donde se almacenan los servidores web de la empresa. Se requiere que los mismos estén siempre activos, debido a esto la topología se vuelve extremadamente pesada. Por lo que se usará un nodo maestro-esclavo para equilibrar la carga del mismo. La cual tiene el diseño siguiente:
 
 ![WhatsApp Image 2023-09-12 at 1 38 25 PM](https://github.com/Barahona1602/VLAN_Topology/assets/98893615/a34600ff-a164-48a8-9707-4712c7947c2a)
@@ -397,19 +397,19 @@ ip 192.168.72.4/24 192.168.72.1
 save
 ```
 
-###Conta_1
+### Conta_1
 ```sh
 ip 192.168.73.2/24 192.168.73.1
 save
 ```
 
-###Conta_2
+### Conta_2
 ```sh
 ip 192.168.73.3/24 192.168.73.1
 save
 ```
 
-###Conta_3
+### Conta_3
 ```sh
 ip 192.168.73.4/24 192.168.73.1
 save
