@@ -1,0 +1,132 @@
+ESW4
+conf t
+int f1/0
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/1
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/2
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+vtp domain GRUPO7
+vtp password grupo7
+vtp version 2
+vtp mode server
+end
+conf t
+vlan 10
+name RRHH
+exit
+vlan 20
+name Informatica
+exit
+vlan 30
+name Contabilidad
+exit
+vlan 40
+name Ventas 
+end
+conf t
+spanning-tree vlan 10 root primary
+end
+conf t
+spanning-tree vlan 20 root primary
+end
+conf t
+spanning-tree vlan 30 root primary
+end
+conf t
+spanning-tree vlan 40 root primary
+end
+copy running-config startup-config
+
+ESW5
+conf t
+int f1/0
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/1
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/2
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/3
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+vtp domain GRUPO7
+vtp password grupo7
+vtp version 2
+vtp mode client
+end
+copy running-config startup-config
+
+ESW6
+conf t
+int f1/0
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/1
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+vtp domain GRUPO7
+vtp password grupo7
+vtp version 2
+vtp mode client
+end
+copy running-config startup-config
+
+ESW7
+conf t
+int f1/0
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/1
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/2
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+int f1/3
+Switchport mode trunk
+Switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+end
+conf t
+vtp domain GRUPO7
+vtp password grupo7
+vtp version 2
+vtp mode client
+end
+copy running-config startup-config
+
+
+
+Informatica_2
+ip 192.168.72.3/24 192.168.72.1
+save
+
